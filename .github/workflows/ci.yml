@@ -34,7 +34,7 @@ jobs:
         run: |
           docker run \
           --mount type=bind,source='${{ github.workspace }}',target='/integrations/src/integration' --mount type=bind,source='${{ github.workspace }}/output',target='/integrations/dist' \
-          swimlane/btb-build:0.1.11-beta.1-3c387cd
+          swimlane/btb-build:0.1.11-beta.1-ef7e0fc
 
       - name: Create Dev Bundle
         if: ${{ steps.gitversion.outputs.preReleaseLabel != '' }}
