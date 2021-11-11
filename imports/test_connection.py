@@ -1,4 +1,4 @@
-from sw_sixgill_dvefeed_ingestion import SixgillDvefeedIngestionBaseClass
+from sw_cybersixgill_dvefeed_ingestion import SixgillDvefeedIngestionBaseClass
 
 
 class SwMain(SixgillDvefeedIngestionBaseClass):
@@ -8,5 +8,5 @@ class SwMain(SixgillDvefeedIngestionBaseClass):
             self.auth_test()
         except Exception as e:
             return {'successful': False,
-                    'errorMessage': "Auth request failed - please verify client_id and client_secret."}
+                    'errorMessage': str(e)}
         return {'successful': True}
