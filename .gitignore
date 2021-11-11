@@ -1,0 +1,13 @@
+venv/
+*.swimbundle
+output/
+dist/
+.idea
+data/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.czrc
+.python-version

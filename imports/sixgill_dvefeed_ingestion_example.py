@@ -1,4 +1,4 @@
-from sw_sixgill_dvefeed_ingestion import SixgillAPIRequests, SwimlaneDVEFeedFields
+from sw_cybersixgill_dvefeed_ingestion import SixgillAPIRequests, SwimlaneDVEFeedFields
 
 
 class SwMain(SixgillAPIRequests):
@@ -13,18 +13,22 @@ class SwMain(SixgillAPIRequests):
         x_sixgill_info = feed.get('x_sixgill_info', {})
         event = x_sixgill_info.get('event', {})
         nvd = x_sixgill_info.get('nvd', {})
-        score = x_sixgill_info.get('score', {})
+        rating = x_sixgill_info.get('score', {})
 
         raw_response = SwimlaneDVEFeedFields(
-            feed.get('id', ''), feed.get('created', ''), str(feed.get('external_references', '[]')),
-            event.get('_id', ''),
+            feed.get('created', ''), feed.get('modified'),
+            feed.get("external_references", [])[0].get("external_id", ''),
+            feed.get('type', ''),
+            rating.get('current', 0),
+            rating.get('highest').get('date', ''),
+            rating.get('highest').get('value', 0),
+            rating.get('previouslyExploited', 0),
+            event.get('name', ''),
+            event.get('type', ''),
             event.get('action', ''),
+            event.get('prev_level', ''),
             event.get('description', ''),
             event.get('event_datetime', ''),
-            event.get('level', ''),
-            event.get('name', ''),
-            event.get('prev_level', ''),
-            event.get('type', ''),
             nvd.get('base_score_v3', 0),
             nvd.get('base_severity_v3', ''),
             nvd.get('link', ''),
@@ -34,10 +38,6 @@ class SwMain(SixgillAPIRequests):
             nvd.get('severity_2_0', ''),
             nvd.get('vector_v2', ''),
             nvd.get('vector_v3', ''),
-            score.get('current', 0),
-            score.get('highest').get('date', ''),
-            score.get('highest').get('value', 0),
-            score.get('previouslyExploited', 0),
             x_sixgill_info
         ).__dict__
 
