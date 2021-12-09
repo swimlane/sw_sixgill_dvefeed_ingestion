@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 1.2.3 - 2021-12-08
+* Reverted runtime to 3.6
 
 ## 1.2.2 - 2021-11-11
 * Resized logo 

@@ -1,11 +1,11 @@
 {
   "name": "Cybersixgill DVE Feed Ingestion",
   "description": "DVE Feed Ingestion",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "family": "Investigation",
   "actionType": "CybersixgillDVEFeedIngestionExample",
   "assetDependencyType": "CybersixgillDVEFeedIngestion",
-  "assetDependencyVersion": "1.2.2",
+  "assetDependencyVersion": "1.2.3",
   "inputParameters": {},
   "availableOutputTypes": [
     "email",
