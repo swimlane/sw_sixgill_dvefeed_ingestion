@@ -3,9 +3,6 @@ from sw_cybersixgill_dvefeed_ingestion import SixgillAPIRequests, SwimlaneDVEFee
 
 class SwMain(SixgillAPIRequests):
 
-    def __init__(self, context):
-        super(SwMain, self).__init__(context)
-
     @classmethod
     def process_feed_data(cls, feed):
         """Process the dvefeed data"""

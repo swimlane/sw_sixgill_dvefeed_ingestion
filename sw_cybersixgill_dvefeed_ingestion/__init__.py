@@ -5,7 +5,7 @@ from sixgill.sixgill_base_client import SixgillBaseClient
 from sixgill.sixgill_constants import FeedStream
 
 
-class SixgillDvefeedIngestionBaseClass(object):
+class SixgillDvefeedIngestionBaseClass:
 
     def __init__(self, context):
         self.client_id = context.asset.get('client_id', '')
@@ -42,6 +42,7 @@ class SixgillAPIRequests(SixgillDvefeedIngestionBaseClass):
 
 class SwimlaneDVEFeedFields:
     """returns the required fields to store in the swimlane platform."""
+
 
     def __init__(self, created, modified, external_id, cve_type, rating_current, rating_highest_date,
                  rating_highest_value, rating_previously_exploited, event_name, event_type, event_action, prev_level,
