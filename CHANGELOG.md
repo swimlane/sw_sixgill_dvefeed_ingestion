@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.4 - 2021-12-21
+* Updated the plugin version
+
 ## 1.2.3 - 2021-12-08
 * Reverted runtime to 3.6
 
