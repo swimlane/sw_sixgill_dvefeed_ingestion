@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.4 - 2022-01-19
+* Updated setup.py
+
 ## 1.2.3 - 2021-12-08
 * Reverted runtime to 3.6
 
