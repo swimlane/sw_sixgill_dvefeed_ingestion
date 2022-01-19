@@ -1,7 +1,7 @@
 {
   "name": "Cybersixgill DVE Feed Ingestion",
   "type": "CybersixgillDVEFeedIngestion",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "DVE Feed Ingestion",
   "family": "Investigation",
   "inputParameters": {

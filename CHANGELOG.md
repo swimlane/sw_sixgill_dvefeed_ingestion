@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.5 - 2022-01-19
+* Updated setup.py
+
 ## 1.2.4 - 2021-12-21
 * Updated the plugin version
 
